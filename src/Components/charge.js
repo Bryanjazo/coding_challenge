@@ -36,18 +36,66 @@ const handleChargeFunc = (amount, details) => {
  // sortedDetails[i].points = Dannon points 100
 
 
- let totalAmount = amountNum
+
  let subtracted;
  let arr = []
+ let tempNum = amountNum
+ let totalAmount = 0
 
+for(let i = 0; i < sortedDetails.length ; i++){
+  if(totalAmount < 0){
+    break
+  }
+  totalAmount =  tempNum - sortedDetails[i].points
+  tempNum = totalAmount
 
- for(let i = 0; i < sortedDetails.length; i++){
-   if(totalAmount > 0){
-     if(totalAmount > sortedDetails[i].points){
+  if(sortedDetails[i].points < totalAmount){
 
-     }
-   }
- }
+  sortedDetails[i] = {id: sortedDetails[i].id,
+      payer: sortedDetails[i].payer ,
+      points: 0,
+      timestamp: sortedDetails[i].timestamp}
+      console.log(sortedDetails[i])
+    }
+
+  if(sortedDetails[i].points > totalAmount){
+
+    sortedDetails[i] = {id: sortedDetails[i].id,
+        payer: sortedDetails[i].payer ,
+        points:  Math.abs(totalAmount),
+        timestamp: sortedDetails[i].timestamp}
+        console.log(sortedDetails[i])
+  }
+  console.log(totalAmount,tempNum,sortedDetails)
+}
+ // while(i < sortedDetails[i].points){
+ //   let tempNum = amountNum
+ //   let totalAmount = 0
+ //
+ //   totalAmount +=  sortedDetails[i].points - tempNum
+ //   tempNum += totalAmount
+ //
+ //   console.log(totalAmount)
+ //  i++
+ // }
+ // for(let i = 0; i < sortedDetails.length; i++){
+ //   let tempNumber = ;
+ //    if(amountNum > 0){
+ //      if(amountNum > sortedDetails[i].points){
+ //      let totalAmount = amountNum
+ //        tempNumber += sortedDetails[i].points - totalAmount;
+ //        console.log(tempNumber)
+ //        totalAmount = tempNumber
+ //          sortedDetails[i] = {id: sortedDetails[i].id,
+ //            payer: sortedDetails[i].payer ,
+ //            points: 0,
+ //            timestamp: sortedDetails[i].timestamp}
+ //            console.log(sortedDetails, '=======',totalAmount)
+ //
+ //      }
+ //
+ //    }
+ //  }
 
  // for(let i = 0; i < sortedDetails.length; i++){
  //   let subtracted;
