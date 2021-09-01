@@ -10,6 +10,15 @@ export const setUserStatus = createAsyncThunk(
   }
 )
 
+export const updateUser = createAsyncThunk(
+  'basket/updateUser',
+  async() => {
+      const response = await fetch(`http://localHost:3000/payers`)
+        const data = await response.json()
+        return data
+  }
+)
+
 
 const basketStore = createSlice({
   name: "basket",

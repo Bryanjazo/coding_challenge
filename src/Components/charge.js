@@ -67,90 +67,17 @@ for(let i = 0; i < sortedDetails.length ; i++){
         console.log(sortedDetails[i])
   }
   console.log(totalAmount,tempNum,sortedDetails)
+
 }
- // while(i < sortedDetails[i].points){
- //   let tempNum = amountNum
- //   let totalAmount = 0
- //
- //   totalAmount +=  sortedDetails[i].points - tempNum
- //   tempNum += totalAmount
- //
- //   console.log(totalAmount)
- //  i++
- // }
- // for(let i = 0; i < sortedDetails.length; i++){
- //   let tempNumber = ;
- //    if(amountNum > 0){
- //      if(amountNum > sortedDetails[i].points){
- //      let totalAmount = amountNum
- //        tempNumber += sortedDetails[i].points - totalAmount;
- //        console.log(tempNumber)
- //        totalAmount = tempNumber
- //          sortedDetails[i] = {id: sortedDetails[i].id,
- //            payer: sortedDetails[i].payer ,
- //            points: 0,
- //            timestamp: sortedDetails[i].timestamp}
- //            console.log(sortedDetails, '=======',totalAmount)
- //
- //      }
- //
- //    }
- //  }
 
- // for(let i = 0; i < sortedDetails.length; i++){
- //   let subtracted;
- //   if(amountNum > 0 && sortedDetails[i].points > 0){
- //     if(amountNum > sortedDetails[i].points){
- //       subtracted += sortedDetails[i].points - amountNum
- //       sortedDetails[i] = {id: sortedDetails[i].id,
- //         payer: sortedDetails[i].payer ,
- //         points: 0,
- //         timestamp: sortedDetails[i].timestamp}
- //     }else if(amountNum < sortedDetails[i].points){
- //       sortedDetails[i] = {id: sortedDetails[i].id,
- //         payer: sortedDetails[i].payer ,
- //         points:  sortedDetails[i].points - subtracted,
- //         timestamp: sortedDetails[i].timestamp}
- //     }else if(amount === 0){
- //       break
- //     }
- //
- //   }
- //     console.log(subtracted,sortedDetails)
- // }
+  updateUser(sortedDetails)
 
-  // for(let i of sortedDetails){
-  //   console.log(totalAmount)
-  //   let obj = {...i}
-  //   if(totalAmount <= 0){
-  //     break
-  //   }
-  //   if(totalAmount > obj.points){
-  //     obj.points = 0
-  //     totalAmount = totalAmount - obj.points
-  //   }else if(obj.points >= totalAmount){
-  //     obj.points += obj.points - totalAmount
-  //     totalAmount = 0
-  //   }
-  //   arr.push(obj)
-  //
-  // }
-  // console.log(arr)
-  // let tempNum = amountNum
-  // while(tempNum > 0){
-  //   if(amountNum > 0 && sortedDetails[i].points > 0){
-  //     let subtracted = tempNum -  sortedDetails[i].points
-  //     tempNum = tempNum - subtracted
-  //
-  //
-  //
-  //     i++
-  //   }
-  // }
-  // console.log(tempNum)
+}
 
-
-
+const  updateUser = (arr) =>{
+  for(let i = 0; i < arr.length; i++){
+    fetch()
+  }
 }
 
 const Charge = () =>{
